@@ -34,7 +34,8 @@ jobs:
       working-directory: myreact
       run: |
        git config --global user.name $user_name
-       git config --global user.email $user_emailgit remote set-url origin https://${github_token}@github.com/${repository}
+       git config --global user.email $user_email
+       git remote set-url origin https://${github_token}@github.com/${repository}
        npm run deploy
       env:
        user_name: 'github-actions[bot]'
